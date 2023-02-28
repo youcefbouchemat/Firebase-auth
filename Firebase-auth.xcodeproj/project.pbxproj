@@ -16,6 +16,7 @@
 		182AAE2429AE0FA3003478F5 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 182AAE2329AE0FA3003478F5 /* FirebaseMessaging */; };
 		182AAE2629AE1044003478F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182AAE2529AE1044003478F5 /* GoogleService-Info.plist */; };
 		182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2929AE1EF8003478F5 /* InputTextFieldView.swift */; };
+		182AAE2C29AE6A2A003478F5 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		182AAE1729AE0A8D003478F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		182AAE2529AE1044003478F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		182AAE2929AE1EF8003478F5 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
+		182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				182AAE2929AE1EF8003478F5 /* InputTextFieldView.swift */,
+				182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182AAE2C29AE6A2A003478F5 /* InputPasswordView.swift in Sources */,
 				182AAE1329AE0A8B003478F5 /* ContentView.swift in Sources */,
 				182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */,
 				182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */,
