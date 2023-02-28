@@ -18,6 +18,7 @@
 		182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2929AE1EF8003478F5 /* InputTextFieldView.swift */; };
 		182AAE2C29AE6A2A003478F5 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */; };
 		182AAE2E29AE780A003478F5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2D29AE780A003478F5 /* ButtonView.swift */; };
+		182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE3029AE7FAE003478F5 /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		182AAE2929AE1EF8003478F5 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
 		182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
 		182AAE2D29AE780A003478F5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		182AAE3029AE7FAE003478F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		182AAE2729AE1EBF003478F5 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				182AAE2F29AE7F96003478F5 /* screens */,
 				182AAE2829AE1EC8003478F5 /* components */,
 			);
 			path = views;
@@ -99,6 +102,14 @@
 				182AAE2D29AE780A003478F5 /* ButtonView.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		182AAE2F29AE7F96003478F5 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				182AAE3029AE7FAE003478F5 /* LoginScreen.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				182AAE2E29AE780A003478F5 /* ButtonView.swift in Sources */,
 				182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */,
 				182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */,
+				182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
