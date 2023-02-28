@@ -16,6 +16,12 @@ struct ContentView: View {
             InputTextFieldView(text: .constant(""), placeholder: "Email", keyboardType: .emailAddress)
             InputTextFieldView(text: $text, placeholder: "Email", keyboardType: .emailAddress)
             InputPasswordView(password: $text, placeholder: "Password",icon: "lock")
+            ButtonView(title: "Login"){
+                print("hello")
+            }
+            ButtonView(title: "Register", backgroundColor: .white, foregroundColor: .blue, border: .blue){
+                print("Register")
+            }
         }.padding()
     }
     
