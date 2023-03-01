@@ -11,6 +11,8 @@ struct LoginScreen: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    @State var loginLoader: Bool = false
+    
     @State private var isShowRegistration: Bool = false
     @State private var isShowResetPassword: Bool = false
     
@@ -52,8 +54,8 @@ struct LoginScreen: View {
                     
                 }
                 
-                ButtonView(title: "Login"){
-                    print("hello")
+                ButtonView(title: "Login",isLoading: loginLoader){
+                    loginLoader.toggle()
                 }
                 ButtonView(title: "Register",
                            backgroundColor: .white,

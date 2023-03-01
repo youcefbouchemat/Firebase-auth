@@ -16,27 +16,38 @@ struct ButtonView: View {
     var foregroundColor: Color
     var border: Color
     let handler: ActionHandler
+    var isLoading: Bool
     
     internal init(title: String,
                   backgroundColor: Color = .blue,
                   foregroundColor: Color = .white,
                   border: Color = .clear,
-                  handler: @escaping ActionHandler) {
+                  handler: @escaping ActionHandler,
+                  isLoading: Bool = false) {
         self.title = title
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
         self.border = border
         self.handler = handler
+        self.isLoading = isLoading
     }
     
     private let radius: CGFloat = 10
     
     var body: some View {
         Button(action: handler) {
-            Text(title)
-                .frame(maxWidth: .infinity,maxHeight: 50)
-                .font(.system(size: 16,weight: .bold))
+            if(isLoading)
+            {
+                ProgressView()
+                    .tint(.white)
+            }else{
+                Text(title)
+                    .font(.system(size: 16,weight: .bold))
+            }
+            
         }
+            .frame(maxWidth: .infinity,maxHeight: 50)
+            .disabled(isLoading)
             .background(backgroundColor)
             .foregroundColor(foregroundColor)
             .cornerRadius(radius)
@@ -47,6 +58,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(title: "Login"){}
+        ButtonView(title: "Login",isLoading: true){}
     }
 }
