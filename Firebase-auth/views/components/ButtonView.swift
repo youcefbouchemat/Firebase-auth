@@ -12,10 +12,22 @@ struct ButtonView: View {
     typealias ActionHandler = () -> Void
     
     let title: String
-    var backgroundColor: Color = .blue
-    var foregroundColor: Color = .white
-    var border: Color = .clear
+    var backgroundColor: Color
+    var foregroundColor: Color
+    var border: Color
     let handler: ActionHandler
+    
+    internal init(title: String,
+                  backgroundColor: Color = .blue,
+                  foregroundColor: Color = .white,
+                  border: Color = .clear,
+                  handler: @escaping ActionHandler) {
+        self.title = title
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
+        self.border = border
+        self.handler = handler
+    }
     
     private let radius: CGFloat = 10
     

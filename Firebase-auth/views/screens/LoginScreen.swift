@@ -26,20 +26,32 @@ struct LoginScreen: View {
                 Text("Login")
                     .font(.system(size: 30,weight: .bold))
                 
-                InputTextFieldView(text: $email, placeholder: "Email", keyboardType: .emailAddress)
+                InputTextFieldView(text: $email,
+                                   placeholder: "Email",
+                                   icon: "at",
+                                   keyboardType: .emailAddress)
                 InputPasswordView(password: $password, placeholder: "Password",icon: "lock")
                 
                 HStack{
                     Spacer()
-                    Text("Forgot Password ?")
-                        .foregroundColor(.blue)
-                        .font(.system(size: 17,weight: .bold))
+                    Button {
+                        print("forgot password")
+                    } label: {
+                        Text("Forgot Password ?")
+                            .foregroundColor(.blue)
+                            .font(.system(size: 17,weight: .bold))
+                    }
+
+                    
                 }
                 
                 ButtonView(title: "Login"){
                     print("hello")
                 }
-                ButtonView(title: "Register", backgroundColor: .white, foregroundColor: .blue, border: .blue){
+                ButtonView(title: "Register",
+                           backgroundColor: .white,
+                           foregroundColor: .blue,
+                           border: .blue){
                     print("Register")
                 }
             }
