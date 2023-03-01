@@ -12,6 +12,7 @@ struct RegisterScreen: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -21,7 +22,7 @@ struct RegisterScreen: View {
                     .scale(1.5)
                     .foregroundColor(Color(UIColor.systemBackground).opacity(0.8))
                 
-                VStack (spacing: 40){
+                VStack (spacing: 25){
                     VStack{
                         InputTextFieldView(text: $username,
                                            placeholder: "Username",
@@ -33,6 +34,8 @@ struct RegisterScreen: View {
                                            keyboardType: .emailAddress)
                         InputPasswordView(password: $password, placeholder: "Password",icon: "lock")
                     }
+                    
+                    Divider()
                     
                     ButtonView(title: "Register",
                                backgroundColor: Color(UIColor.systemBackground).opacity(0.1),
@@ -46,6 +49,7 @@ struct RegisterScreen: View {
                 .navigationTitle("Register")
 
             }
+            .applyClose()
         }
     }
 }
