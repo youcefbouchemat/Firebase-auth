@@ -10,6 +10,11 @@ import SwiftUI
 struct LoginScreen: View {
     @State var email: String = ""
     @State var password: String = ""
+    
+    @State private var isShowRegistration: Bool = false
+    @State private var isShowResetPassword: Bool = false
+    
+    
     var body: some View {
         ZStack{
             Color.blue
@@ -35,11 +40,13 @@ struct LoginScreen: View {
                 HStack{
                     Spacer()
                     Button {
-                        print("forgot password")
+                        isShowResetPassword.toggle()
                     } label: {
                         Text("Forgot Password ?")
                             .foregroundColor(.blue)
                             .font(.system(size: 17,weight: .bold))
+                    }.sheet(isPresented: $isShowResetPassword) {
+                        ResetPassword()
                     }
 
                     
@@ -52,8 +59,11 @@ struct LoginScreen: View {
                            backgroundColor: .white,
                            foregroundColor: .blue,
                            border: .blue){
-                    print("Register")
+                    isShowRegistration.toggle()
                 }
+                   .sheet(isPresented: $isShowRegistration) {
+                       RegisterScreen()
+                   }
             }
             .padding()
         }
