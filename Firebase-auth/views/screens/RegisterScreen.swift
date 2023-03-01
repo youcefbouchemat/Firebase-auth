@@ -32,7 +32,9 @@ struct RegisterScreen: View {
                                            placeholder: "Email",
                                            icon: "at",
                                            keyboardType: .emailAddress)
-                        InputPasswordView(password: $password, placeholder: "Password",icon: "lock")
+                        InputPasswordView(password: $password,
+                                          placeholder: "Password",
+                                          icon: "lock")
                     }
                     
                     Divider()

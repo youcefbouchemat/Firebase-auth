@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1819419E29AF36A900C345E7 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819419D29AF36A900C345E7 /* RegisterScreen.swift */; };
 		181941A129AF3C0600C345E7 /* CloseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181941A029AF3C0600C345E7 /* CloseModifier.swift */; };
+		181941A329AF3E8500C345E7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181941A229AF3E8500C345E7 /* HomeScreen.swift */; };
 		182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE1029AE0A8B003478F5 /* Firebase_authApp.swift */; };
 		182AAE1329AE0A8B003478F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE1229AE0A8B003478F5 /* ContentView.swift */; };
 		182AAE1529AE0A8D003478F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182AAE1429AE0A8D003478F5 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		1819419D29AF36A900C345E7 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		181941A029AF3C0600C345E7 /* CloseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModifier.swift; sourceTree = "<group>"; };
+		181941A229AF3E8500C345E7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		182AAE0D29AE0A8B003478F5 /* Firebase-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182AAE1029AE0A8B003478F5 /* Firebase_authApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_authApp.swift; sourceTree = "<group>"; };
 		182AAE1229AE0A8B003478F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				182AAE3029AE7FAE003478F5 /* LoginScreen.swift */,
 				1819419D29AF36A900C345E7 /* RegisterScreen.swift */,
+				181941A229AF3E8500C345E7 /* HomeScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				182AAE2E29AE780A003478F5 /* ButtonView.swift in Sources */,
 				181941A129AF3C0600C345E7 /* CloseModifier.swift in Sources */,
 				1819419E29AF36A900C345E7 /* RegisterScreen.swift in Sources */,
+				181941A329AF3E8500C345E7 /* HomeScreen.swift in Sources */,
 				182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */,
 				182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */,
 				182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */,
