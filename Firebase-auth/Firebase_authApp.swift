@@ -22,7 +22,7 @@ struct Firebase_authApp: App {
     //Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @StateObject var sessionObject = SessionService()
+    @StateObject var sessionObject = SessionViewModal(service: SessionService())
     
     var body: some Scene {
         WindowGroup {

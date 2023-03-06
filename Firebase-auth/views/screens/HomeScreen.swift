@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @EnvironmentObject var sessionObject: SessionService
+    @EnvironmentObject var sessionObject: SessionViewModal
     var body: some View {
         VStack(spacing: 20) {
             VStack{
