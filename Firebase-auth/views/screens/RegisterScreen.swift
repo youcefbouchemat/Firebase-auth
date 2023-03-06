@@ -39,7 +39,8 @@ struct RegisterScreen: View {
                     ButtonView(title: "Register",
                                backgroundColor: Color(UIColor.systemBackground).opacity(0.1),
                                foregroundColor: .blue,
-                               border: .blue){
+                               border: .blue,
+                               isLoading:vm.isLoading){
                         vm.register()
                     }
                     

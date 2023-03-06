@@ -16,6 +16,7 @@ enum RegistrationState {
 
 protocol RegistrationViewModalProtocol {
     func register()
+    var isLoading: Bool { get }
     var service: RegistrationService { get }
     var state: RegistrationState { get }
     var userDetails: RegistrationModal { get }
@@ -28,6 +29,8 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
     
     var state: RegistrationState = .na
     
+    @Published var isLoading: Bool = false
+    
     @Published var userDetails: RegistrationModal = RegistrationModal.new
     
     private var subscriptions = Set<AnyCancellable>()
@@ -37,6 +40,7 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
     }
     
     func register() {
+        isLoading = true
         service.register(with: userDetails)
             .sink { [weak self] res in
                 switch res {
@@ -48,6 +52,7 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
                 self?.state = .successfull
             }
             .store(in: &subscriptions)
+        isLoading = false
     }
     
     
