@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @StateObject private var vm: LoginViewModal = LoginViewModal(service: LoginService())
     
     @State var loginLoader: Bool = false
     
@@ -33,11 +32,11 @@ struct LoginScreen: View {
                 Text("Login")
                     .font(.system(size: 30,weight: .bold))
                 
-                InputTextFieldView(text: $email,
+                InputTextFieldView(text: $vm.details.email,
                                    placeholder: "Email",
                                    icon: "at",
                                    keyboardType: .emailAddress)
-                InputPasswordView(password: $password, placeholder: "Password",icon: "lock")
+                InputPasswordView(password: $vm.details.password, placeholder: "Password",icon: "lock")
                 
                 HStack{
                     Spacer()
@@ -55,7 +54,7 @@ struct LoginScreen: View {
                 }
                 
                 ButtonView(title: "Login",isLoading: loginLoader){
-                    loginLoader.toggle()
+                    vm.login()
                 }
                 ButtonView(title: "Register",
                            backgroundColor: .white,

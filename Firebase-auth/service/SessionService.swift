@@ -15,10 +15,7 @@ protocol SessionServiceProtocol{
 }
 
 final class SessionService: ObservableObject, SessionServiceProtocol{
-    
     func logout() {
         try? Auth.auth().signOut()
     }
-    
-    
 }
