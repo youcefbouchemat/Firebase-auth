@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @EnvironmentObject var sessionObject: SessionService
     var body: some View {
         VStack(spacing: 20) {
             VStack{
-                Text("You are logged in")
+                Text("You are logged in \(sessionObject.sessionDetails?.email ?? "")")
                 Text("You can logout from here")
             }
             ButtonView(title: "Login"){
-                print("hello")
+                sessionObject.logout()
             }
         }
         .navigationTitle("Home")
@@ -27,6 +28,7 @@ struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             HomeScreen()
+                .environmentObject(SessionService())
         }
     }
 }

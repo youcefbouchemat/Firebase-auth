@@ -41,6 +41,7 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
     
     func register() {
         isLoading = true
+        //TODO: check the loader (async await maybe)
         service.register(with: userDetails)
             .sink { [weak self] res in
                 switch res {

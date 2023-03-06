@@ -22,9 +22,20 @@ struct Firebase_authApp: App {
     //Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var sessionObject = SessionService()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                switch sessionObject.state{
+                case .loggedOut:
+                    LoginScreen()
+                case .loggedIn:
+                    HomeScreen()
+                        .environmentObject(sessionObject)
+                }
+                
+            }
         }
     }
 }
