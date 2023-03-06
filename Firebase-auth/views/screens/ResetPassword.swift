@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetPassword: View {
     
-    @State var email: String = ""
+    @StateObject private var vm = ResetPasswordViewModal(service: ResetPasswordService())
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -30,7 +30,7 @@ struct ResetPassword: View {
                     Text("Reset Password")
                         .font(.system(size: 30,weight: .bold))
                     
-                    InputTextFieldView(text: $email,
+                    InputTextFieldView(text: $vm.email,
                                        placeholder: "Email",
                                        icon: "at",
                                        keyboardType: .emailAddress)
@@ -38,7 +38,7 @@ struct ResetPassword: View {
                     
                     
                     ButtonView(title: "Send Password Reset"){
-                        print("hello")
+                        vm.sendResetPassword()
                         presentationMode.wrappedValue.dismiss()
                     }
                    

@@ -28,6 +28,8 @@
 		183B698329B63E02004150A3 /* LoginModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B698229B63E02004150A3 /* LoginModal.swift */; };
 		183B698529B63E2F004150A3 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B698429B63E2F004150A3 /* LoginService.swift */; };
 		183B698729B63FE8004150A3 /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B698629B63FE8004150A3 /* LoginViewModal.swift */; };
+		183B698929B6685B004150A3 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B698829B6685B004150A3 /* ResetPasswordService.swift */; };
+		183B698B29B669E1004150A3 /* ResetPasswordViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B698A29B669E1004150A3 /* ResetPasswordViewModal.swift */; };
 		18F8DBCD29B52F6500D36EEA /* RegistrationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBCC29B52F6500D36EEA /* RegistrationModal.swift */; };
 		18F8DBD029B5306500D36EEA /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBCF29B5306500D36EEA /* RegistrationService.swift */; };
 		18F8DBD329B5345F00D36EEA /* RegistrationViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */; };
@@ -53,6 +55,8 @@
 		183B698229B63E02004150A3 /* LoginModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModal.swift; sourceTree = "<group>"; };
 		183B698429B63E2F004150A3 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		183B698629B63FE8004150A3 /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
+		183B698829B6685B004150A3 /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = "<group>"; };
+		183B698A29B669E1004150A3 /* ResetPasswordViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModal.swift; sourceTree = "<group>"; };
 		18F8DBCC29B52F6500D36EEA /* RegistrationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModal.swift; sourceTree = "<group>"; };
 		18F8DBCF29B5306500D36EEA /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModal.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				18F8DBCF29B5306500D36EEA /* RegistrationService.swift */,
 				183B697E29B615FA004150A3 /* SessionService.swift */,
 				183B698429B63E2F004150A3 /* LoginService.swift */,
+				183B698829B6685B004150A3 /* ResetPasswordService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */,
 				183B698029B63ACD004150A3 /* SessionViewModal.swift */,
 				183B698629B63FE8004150A3 /* LoginViewModal.swift */,
+				183B698A29B669E1004150A3 /* ResetPasswordViewModal.swift */,
 			);
 			path = viewModal;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				181941A329AF3E8500C345E7 /* HomeScreen.swift in Sources */,
 				182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */,
 				18F8DBD329B5345F00D36EEA /* RegistrationViewModal.swift in Sources */,
+				183B698929B6685B004150A3 /* ResetPasswordService.swift in Sources */,
+				183B698B29B669E1004150A3 /* ResetPasswordViewModal.swift in Sources */,
 				182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */,
 				182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */,
 			);
