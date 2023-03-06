@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct RegisterScreen: View {
-    @State var username: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-    
+    @StateObject private var vm = RegistrationViewModal(service: RegistrationService())
     
     var body: some View {
         NavigationView{
@@ -24,15 +21,15 @@ struct RegisterScreen: View {
                 
                 VStack (spacing: 25){
                     VStack{
-                        InputTextFieldView(text: $username,
+                        InputTextFieldView(text: $vm.userDetails.username,
                                            placeholder: "Username",
                                            icon: "person",
                                            keyboardType: .emailAddress)
-                        InputTextFieldView(text: $email,
+                        InputTextFieldView(text: $vm.userDetails.email,
                                            placeholder: "Email",
                                            icon: "at",
                                            keyboardType: .emailAddress)
-                        InputPasswordView(password: $password,
+                        InputPasswordView(password: $vm.userDetails.password,
                                           placeholder: "Password",
                                           icon: "lock")
                     }
@@ -43,7 +40,7 @@ struct RegisterScreen: View {
                                backgroundColor: Color(UIColor.systemBackground).opacity(0.1),
                                foregroundColor: .blue,
                                border: .blue){
-                        print("Register")
+                        vm.register()
                     }
                     
                     

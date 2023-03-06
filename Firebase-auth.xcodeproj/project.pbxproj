@@ -23,6 +23,9 @@
 		182AAE2C29AE6A2A003478F5 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */; };
 		182AAE2E29AE780A003478F5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE2D29AE780A003478F5 /* ButtonView.swift */; };
 		182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AAE3029AE7FAE003478F5 /* LoginScreen.swift */; };
+		18F8DBCD29B52F6500D36EEA /* RegistrationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBCC29B52F6500D36EEA /* RegistrationModal.swift */; };
+		18F8DBD029B5306500D36EEA /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBCF29B5306500D36EEA /* RegistrationService.swift */; };
+		18F8DBD329B5345F00D36EEA /* RegistrationViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		182AAE2B29AE6A2A003478F5 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
 		182AAE2D29AE780A003478F5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		182AAE3029AE7FAE003478F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		18F8DBCC29B52F6500D36EEA /* RegistrationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModal.swift; sourceTree = "<group>"; };
+		18F8DBCF29B5306500D36EEA /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 		182AAE0F29AE0A8B003478F5 /* Firebase-auth */ = {
 			isa = PBXGroup;
 			children = (
+				18F8DBD129B5344600D36EEA /* viewModal */,
+				18F8DBCE29B5304D00D36EEA /* service */,
+				18F8DBCB29B52F4600D36EEA /* modal */,
 				182AAE2729AE1EBF003478F5 /* views */,
 				182AAE2529AE1044003478F5 /* GoogleService-Info.plist */,
 				182AAE1029AE0A8B003478F5 /* Firebase_authApp.swift */,
@@ -130,6 +139,30 @@
 				181941A429AF403800C345E7 /* ResetPassword.swift */,
 			);
 			path = screens;
+			sourceTree = "<group>";
+		};
+		18F8DBCB29B52F4600D36EEA /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				18F8DBCC29B52F6500D36EEA /* RegistrationModal.swift */,
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		18F8DBCE29B5304D00D36EEA /* service */ = {
+			isa = PBXGroup;
+			children = (
+				18F8DBCF29B5306500D36EEA /* RegistrationService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		18F8DBD129B5344600D36EEA /* viewModal */ = {
+			isa = PBXGroup;
+			children = (
+				18F8DBD229B5345F00D36EEA /* RegistrationViewModal.swift */,
+			);
+			path = viewModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +248,13 @@
 				182AAE1329AE0A8B003478F5 /* ContentView.swift in Sources */,
 				181941A529AF403800C345E7 /* ResetPassword.swift in Sources */,
 				182AAE2E29AE780A003478F5 /* ButtonView.swift in Sources */,
+				18F8DBD029B5306500D36EEA /* RegistrationService.swift in Sources */,
+				18F8DBCD29B52F6500D36EEA /* RegistrationModal.swift in Sources */,
 				181941A129AF3C0600C345E7 /* CloseModifier.swift in Sources */,
 				1819419E29AF36A900C345E7 /* RegisterScreen.swift in Sources */,
 				181941A329AF3E8500C345E7 /* HomeScreen.swift in Sources */,
 				182AAE1129AE0A8B003478F5 /* Firebase_authApp.swift in Sources */,
+				18F8DBD329B5345F00D36EEA /* RegistrationViewModal.swift in Sources */,
 				182AAE2A29AE1EF8003478F5 /* InputTextFieldView.swift in Sources */,
 				182AAE3129AE7FAE003478F5 /* LoginScreen.swift in Sources */,
 			);
