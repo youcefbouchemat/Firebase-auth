@@ -12,7 +12,7 @@ struct HomeScreen: View {
     var body: some View {
         VStack(spacing: 20) {
             VStack{
-                Text("You are logged in \(sessionObject.sessionDetails?.email ?? "")")
+                Text("You are logged in \(sessionObject.sessionDetails?.username ?? "")")
                 Text("You can logout from here")
             }
             ButtonView(title: "Login"){

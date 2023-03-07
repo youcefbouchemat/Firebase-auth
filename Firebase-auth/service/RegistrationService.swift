@@ -18,7 +18,17 @@ final class RegistrationService: RegistrationServiceProtocol{
         
         Deferred {
             Future { promise in
-                Auth.auth().createUser(withEmail: details.email, password: details.password){ res, error in
+                Auth
+                    .auth()
+                    .createUser(withEmail: details.email, password: details.password){ res, error in
+                        
+                        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                        changeRequest?.displayName = details.username
+                        changeRequest?.commitChanges { error in
+                            if let err = error {
+                                promise(.failure(err))
+                            }
+                        }
                     if let err = error {
                         promise(.failure(err))
                     }
