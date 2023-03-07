@@ -47,6 +47,13 @@ struct RegisterScreen: View {
                     
                 }.padding()
                 .navigationTitle("Register")
+                .alert(isPresented: $vm.hasError){
+                    if case .failed(let error) = vm.state{
+                        return Alert(title: Text("Error"),message: Text(error.localizedDescription))
+                    } else {
+                        return Alert(title: Text("Erro"),message: Text("Something went wrong"))
+                    }
+                }
 
             }
             .applyClose()

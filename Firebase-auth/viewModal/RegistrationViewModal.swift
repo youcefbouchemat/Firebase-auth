@@ -17,6 +17,7 @@ enum RegistrationState {
 protocol RegistrationViewModalProtocol {
     func register()
     var isLoading: Bool { get }
+    var hasError: Bool { get }
     var service: RegistrationService { get }
     var state: RegistrationState { get }
     var userDetails: RegistrationModal { get }
@@ -27,7 +28,9 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
     
     let service: RegistrationService
     
-    var state: RegistrationState = .na
+    @Published var state: RegistrationState = .na
+    
+    @Published var hasError: Bool = false
     
     @Published var isLoading: Bool = false
     
@@ -37,6 +40,7 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
     
     init(service: RegistrationService) {
         self.service = service
+        setupErrorsubscriptions()
     }
     
     func register() {
@@ -55,9 +59,20 @@ final class RegistrationViewModal: ObservableObject, RegistrationViewModalProtoc
             .store(in: &subscriptions)
         isLoading = false
     }
-    
-    
-    
-    
+}
+
+private extension RegistrationViewModal {
+    func setupErrorsubscriptions(){
+        $state
+            .map { state -> Bool in
+                switch state {
+                case .successfull, .na:
+                    return false
+                case.failed:
+                    return true
+                }
+            }
+            .assign(to: &$hasError)
+    }
 }
 
